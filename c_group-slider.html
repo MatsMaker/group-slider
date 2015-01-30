@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+        <title> SmartAdmin </title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- Basic Styles -->
+        <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+        
+    </head>
+    <body class="">
+
+
+                        <!-- FIRST Slider not work is for HTML laut -->
+                        <div class="row">
+                            <section class="col-md-2"></section>
+                            <section class="col-md-8">
+                                EXAMPL TEMPLATE IN <xmp> <script type="template/js" id="template-group-select">...</script> </xmp>
+                                <h1>style hide</h1>
+                            </section>
+                            <section class="col-md-2"></section>
+                        </div>
+
+                        <div class="row">
+                            <section class="col-md-2"></section>
+                            <section class="col-md-8">
+
+                                <div class="group-select-0">
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-success  gs-btn-add">
+                                            Click me!
+                                        </button>
+                                    </div>
+                                    <div class="gs-render"></div>
+                                </div>
+
+                            </section>
+                            <section class="col-md-2"></section>
+                        </div>
+                            
+
+                        <div class="row">
+                            <section class="col-md-2"></section>
+                            <section class="col-md-8">
+                                <h1>style disabled</h1>
+                            </section>
+                            <section class="col-md-2"></section>
+                        </div>
+                            
+                        <div class="row">
+                            <section class="col-md-2"></section>
+                            <section class="col-md-8">
+
+                                <div class="group-select-1">
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-success  gs-btn-add">
+                                            Click me!
+                                        </button>
+                                    </div>
+                                    <div class="gs-render"></div>
+                                </div>
+                                
+                            </section>
+                            <section class="col-md-2"></section>
+                        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+        <script>
+            if (!window.jQuery) {
+                document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+            }
+        </script>
+
+        <!---  for working group-select -->
+        <script type="template/js" id="template-group-select">
+
+            <form class="qs-wrapper form-inline form-group">
+              <div class="form-group">
+                <label for="caunt">Caunt:</label>
+                <input type="text" class="form-control" id="caunt" placeholder="100">
+              </div>
+              <div class="form-group">
+                <label>Type:</label>
+                <select class="qs-select form-control"></select>
+              </div>
+              <div class="form-group">
+                <button type="button" class="qs-btn-remove btn btn-danger">Delete</button>
+              </div>
+            </form>
+
+        </script>
+
+        <script src="js/jq.group-select.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var arr = [{
+                        label: 'Choose name',
+                        value: '0'
+                    }, {
+                        label: 'Alexandra',
+                        value: '1'
+                    }, {
+                        label: 'Alice',
+                        value: '2'
+                    }, {
+                        label: 'Anastasia',
+                        value: '3'
+                    }, {
+                        label: 'Avelina',
+                        value: '4'
+                    }];
+
+                $('.group-select-0').qrupSelect({
+                    data: arr,
+                    style: 'disabled' //'disabled' or 'hide'
+                });
+
+                arr.push({
+                    label: 'Tavelina',
+                    value: '5'
+                });
+
+                $('.group-select-1').qrupSelect({
+                    data: arr,
+                    style: 'hide'
+                });
+
+            });
+        </script>
+
+    </body>
+
+</html>
